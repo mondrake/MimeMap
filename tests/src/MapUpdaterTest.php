@@ -22,9 +22,10 @@ class MapUpdaterTest extends TestCase
         $this->fileSystem = new Filesystem();
     }
 
-    public function testCreateMapFromSourceFile()
+    public function testLoadMapFromApacheFile()
     {
-        $map = $this->updater->createMapFromSourceFile(dirname(__FILE__) . '/../fixtures/min.mime-types.txt');
+        $map = MapHandler::map('\FileEye\MimeMap\Map\EmptyMap');
+        $this->updater->loadMapFromApacheFile($map, dirname(__FILE__) . '/../fixtures/min.mime-types.txt');
         $expected = [
             'types' => [
                 'image/jpeg' => ['jpeg', 'jpg', 'jpe'],
@@ -46,9 +47,10 @@ class MapUpdaterTest extends TestCase
     /**
      * @expectedException \RuntimeException
      */
-    public function testCreateMapFromSourceFileZeroLines()
+    public function testLoadMapFromApacheFileZeroLines()
     {
-        $map = $this->updater->createMapFromSourceFile(dirname(__FILE__) . '/../fixtures/zero.mime-types.txt');
+        $map = MapHandler::map('\FileEye\MimeMap\Map\EmptyMap');
+        $this->updater->loadMapFromApacheFile($map, dirname(__FILE__) . '/../fixtures/zero.mime-types.txt');
         $this->assertNull($map->getMapArray());
         $map->reset();
     }
@@ -71,7 +73,8 @@ class MapUpdaterTest extends TestCase
         $this->assertContains('src/Map/MiniMap.php', $map_a->getFileName());
         $content = file_get_contents($map_a->getFileName());
         $this->assertNotContains('text/plain', $content);
-        $map_b = $this->updater->createMapFromSourceFile(dirname(__FILE__) . '/../fixtures/min.mime-types.txt');
+        $map_b = MapHandler::map('\FileEye\MimeMap\Map\EmptyMap');
+        $this->updater->loadMapFromApacheFile($map_b, dirname(__FILE__) . '/../fixtures/min.mime-types.txt');
         $this->updater->applyOverrides($map_b, [['addMapping', ['bing/bong', 'binbon']]]);
         $this->updater->writeMapToPhpClassFile($map_b, $map_a->getFileName());
         $content = file_get_contents($map_a->getFileName());
@@ -82,8 +85,8 @@ class MapUpdaterTest extends TestCase
         $map_b->reset();
     }
 
-    public function testGetDefaultOverrideFile()
+    public function testGetDefaultMapBuildFile()
     {
-        $this->assertContains('apache_overrides.yml', MapUpdater::getDefaultOverrideFile());
+        $this->assertContains('default_map_build.yml', MapUpdater::getDefaultMapBuildFile());
     }
 }

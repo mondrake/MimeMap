@@ -27,26 +27,19 @@ class UpdateCommand extends Command
     {
         $this
             ->setName('update')
-            ->setDescription('Updates the MIME-type-to-extension map. Reads the source file specified by --source, applies any overrides specified in the file at --override, then writes the map to the PHP file where the PHP --class is defined.')
+            ->setDescription('Updates the MIME-type-to-extension map. Executes the commands in the script file specified by --script, then writes the map to the PHP file where the PHP --class is defined.')
             ->addOption(
-                'source',
+                'script',
                 null,
                 InputOption::VALUE_REQUIRED,
-                'URL or filename of the source map',
-                MapUpdater::DEFAULT_SOURCE_FILE
-            )
-            ->addOption(
-                'override',
-                null,
-                InputOption::VALUE_REQUIRED,
-                'URL or filename of the override commands to execute',
-                MapUpdater::getDefaultOverrideFile()
+                'File name of the script containing the sequence of commands to execute to build the default map.',
+                MapUpdater::getDefaultMapBuildFile()
             )
             ->addOption(
                 'class',
                 null,
                 InputOption::VALUE_REQUIRED,
-                'The Fully Qualified Class Name of the PHP class storing the map',
+                'The fully qualified class name of the PHP class storing the map.',
                 MapHandler::DEFAULT_MAP_CLASS
             )
         ;
@@ -63,7 +56,8 @@ class UpdateCommand extends Command
 
         // Loads the map from the source file.
         try {
-            $new_map = $updater->createMapFromSourceFile($input->getOption('source'));
+            $new_map = MapHandler::map('\FileEye\MimeMap\Map\EmptyMap');
+            $updater->loadMapFromApacheFile($new_map, 'http://svn.apache.org/viewvc/httpd/httpd/trunk/docs/conf/mime.types?view=co');
         } catch (\RuntimeException $e) {
             $output->writeln('<error>' . $e->getMessage() . '</error>');
             exit(2);

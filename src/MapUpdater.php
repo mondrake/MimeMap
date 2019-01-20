@@ -12,11 +12,7 @@ class MapUpdater
     /**
      * Default URL where to read the specification from.
      *
-     * The apache httpd project contains the most complete list of file
-     * extension to mime type mapping on the planet. We use it to update our
-     * own list.
      */
-    const DEFAULT_SOURCE_FILE = 'http://svn.apache.org/viewvc/httpd/httpd/trunk/docs/conf/mime.types?view=co';
 
     /**
      * Returns the default file with override commands to be executed.
@@ -27,14 +23,16 @@ class MapUpdater
      *
      * @return string
      */
-    public static function getDefaultOverrideFile()
+    public static function getDefaultMapBuildFile()
     {
-        return __DIR__ . '/../resources/apache_overrides.yml';
+        return __DIR__ . '/../resources/default_map_build.yml';
     }
 
     /**
      * Creates a new type-to-extension map reading from a file.
      *
+     * @param AbstractMap $map
+     *   The map.
      * @param string $source_file
      *   (Optional) the source file. Defaults to the Apache source bind_textdomain_codeset
      *   repository file where MIME types and file extensions are associated.
@@ -44,9 +42,8 @@ class MapUpdater
      * @return AbstractMap
      *   The new map.
      */
-    public function createMapFromSourceFile($source_file = MapUpdater::DEFAULT_SOURCE_FILE)
+    public function loadMapFromApacheFile(AbstractMap $map, $source_file)
     {
-        $map = MapHandler::map('\FileEye\MimeMap\Map\EmptyMap');
         $lines = file($source_file);
         foreach ($lines as $line) {
             if ($line{0} == '#') {
