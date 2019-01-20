@@ -67,9 +67,44 @@ class MapUpdater
                 $this->map->addMapping($type, $extension);
             }
         }
-        $map_array = $this->map->getMapArray();
-        if (empty($map_array)) {
-            throw new \RuntimeException('No data found in file ' . $source_file);
+        return $this;
+    }
+
+    /**
+     * Loads a new type-to-extension map reading from a Freedesktop.org file.
+     *
+     * @param string $source_file
+     *   The source file. The file must conform to the format in the
+     *   Freedesktop.org database.
+     *
+     * @throws \RuntimeException if file I/O error occurs.
+     *
+     * @return $this
+     */
+    public function loadMapFromFreedesktopFile($source_file)
+    {
+        $xml = simplexml_load_string(file_get_contents($source_file));
+        foreach ($xml as $node) {
+            $exts = [];
+            foreach ($node->glob as $glob) {
+                $pattern = (string) $glob['pattern'];
+                if ('*' != $pattern[0] || '.' != $pattern[1]) {
+                    continue;
+                }
+                $exts[] = substr($pattern, 2);
+            }
+            if (!$exts) {
+                continue;
+            }
+            $mt = (string) $node['type'];
+            foreach ($exts as $ext) {
+                $this->map->addMapping($mt, $ext);
+            }
+            //$new[$mt] = $exts;
+/*              foreach ($node->alias as $alias) {
+                $mt = strtolower((string) $alias['type']);
+                $new[$mt] = array_merge($new[$mt] ?? [], $exts);
+            }*/
         }
         return $this;
     }
