@@ -50,19 +50,22 @@ class UpdateCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        MapHandler::setDefaultMapClass($input->getOption('class'));
-        $current_map = MapHandler::map();
-        $updater = new MapUpdater();
+        $updater = new MapUpdater(MapHandler::map('\FileEye\MimeMap\Map\EmptyMap'));
 
-        // Loads the map from the source file.
-        try {
-            $new_map = MapHandler::map('\FileEye\MimeMap\Map\EmptyMap');
-            $updater->loadMapFromApacheFile($new_map, 'http://svn.apache.org/viewvc/httpd/httpd/trunk/docs/conf/mime.types?view=co');
-        } catch (\RuntimeException $e) {
-            $output->writeln('<error>' . $e->getMessage() . '</error>');
-            exit(2);
+        // Executes on an emtpy map the script commands.
+        $commands = Yaml::parse(file_get_contents($input->getOption('script')));
+        foreach ($commands as $command) {
+          try {
+              call_user_func_array([$updater, $command[0]], $command[1]);
+          } catch (\Exception $e) {
+              $output->writeln('<error>' . $e->getMessage() . '</error>');
+              exit(2);
+          }
         }
 
+
+        MapHandler::setDefaultMapClass($input->getOption('class'));
+        $current_map = MapHandler::map();
 
 
 

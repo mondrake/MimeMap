@@ -10,9 +10,11 @@ use FileEye\MimeMap\Map\AbstractMap;
 class MapUpdater
 {
     /**
-     * Default URL where to read the specification from.
+     * The AbstractMap object to update.
      *
+     * @var AbstractMap
      */
+    protected $map;
 
     /**
      * Returns the default file with override commands to be executed.
@@ -29,20 +31,29 @@ class MapUpdater
     }
 
     /**
-     * Creates a new type-to-extension map reading from a file.
+     * Constructor.
      *
      * @param AbstractMap $map
      *   The map.
+     */
+    public function __construct(AbstractMap $map)
+    {
+        $this->map = $map;
+    }
+
+    /**
+     * Loads a new type-to-extension map reading from a file in Apache format.
+     *
      * @param string $source_file
-     *   (Optional) the source file. Defaults to the Apache source bind_textdomain_codeset
-     *   repository file where MIME types and file extensions are associated.
+     *   The source file. The file must conform to the format in the Apache
+     *   source code repository file where MIME types and file extensions are
+     *   associated.
      *
      * @throws \RuntimeException if file I/O error occurs.
      *
-     * @return AbstractMap
-     *   The new map.
+     * @return $this
      */
-    public function loadMapFromApacheFile(AbstractMap $map, $source_file)
+    public function loadMapFromApacheFile($source_file)
     {
         $lines = file($source_file);
         foreach ($lines as $line) {
@@ -53,48 +64,45 @@ class MapUpdater
             $parts = explode(' ', $line);
             $type = array_shift($parts);
             foreach ($parts as $extension) {
-                $map->addMapping($type, $extension);
+                $this->map->addMapping($type, $extension);
             }
         }
-        $map_array = $map->getMapArray();
+        $map_array = $this->map->getMapArray();
         if (empty($map_array)) {
             throw new \RuntimeException('No data found in file ' . $source_file);
         }
-        return $map;
+        return $this;
     }
 
     /**
      * Applies to the map an array of overrides.
      *
-     * @param AbstractMap $map
-     *   The map.
      * @param array $overrides
      *   The overrides to be applied.
      *
-     * @return void
+     * @return $this
      */
-    public function applyOverrides(AbstractMap $map, array $overrides)
+    public function applyOverrides(array $overrides)
     {
         foreach ($overrides as $command) {
-            call_user_func_array([$map, $command[0]], $command[1]);
+            call_user_func_array([$this->map, $command[0]], $command[1]);
         }
+        return $this;
     }
 
     /**
      * Updates the map at a destination PHP file.
      *
-     * @param AbstractMap $map
-     *   The map.
-     *
-     * @return void
+     * @return $this
      */
-    public function writeMapToPhpClassFile(AbstractMap $map, $file)
+    public function writeMapToPhpClassFile($file)
     {
         $content = preg_replace(
             '#protected static \$map = (.+?);#s',
-            "protected static \$map = " . var_export($map->getMapArray(), true) . ";",
+            "protected static \$map = " . var_export($this->map->getMapArray(), true) . ";",
             file_get_contents($file)
         );
         file_put_contents($file, $content);
+        return $this;
     }
 }

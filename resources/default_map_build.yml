@@ -12,14 +12,18 @@
 # The entries are executed sequentially; each entry indicates a MapUpdater
 # method to be invoked and the arguments to be passed in.
 -
-    # The apache httpd project contains the most complete list of file
+    # The Apache httpd project contains the most complete list of file
     # extension to mime type mapping on the planet. We use it to update our
     # own list.
     - loadMapFromApacheFile
     - [http://svn.apache.org/viewvc/httpd/httpd/trunk/docs/conf/mime.types?view=co]
 -
-    - setExtensionDefaultType
-    - [sub, text/vnd.dvb.subtitle]
--
-    - setExtensionDefaultType
-    - [wmz, application/x-msmetafile]
+    # MimeMap overrides.
+    - applyOverrides
+    - 
+        -
+            - setExtensionDefaultType
+            - [sub, text/vnd.dvb.subtitle]
+        -
+            - setExtensionDefaultType
+            - [wmz, application/x-msmetafile]
