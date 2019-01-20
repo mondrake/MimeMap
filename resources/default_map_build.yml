@@ -29,9 +29,5 @@
     - applyOverrides
     -
         -
-            -
-                - setExtensionDefaultType
-                - [sub, text/vnd.dvb.subtitle]
-            -
-                - setExtensionDefaultType
-                - [wmz, application/x-msmetafile]
+            - [setExtensionDefaultType, [sub, text/vnd.dvb.subtitle]]
+            - [setExtensionDefaultType, [wmz, application/x-msmetafile]]

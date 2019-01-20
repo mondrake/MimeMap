@@ -55,7 +55,6 @@ class UpdateCommand extends Command
 
         // Executes on an emtpy map the script commands.
         $commands = Yaml::parse(file_get_contents($input->getOption('script')));
-dump(Yaml::dump($commands));
         foreach ($commands as $command) {
             try {
                 call_user_func_array([$updater, $command[0]], $command[1]);
@@ -87,7 +86,7 @@ dump(Yaml::dump($commands));
 
         // If changed, save the new map to the PHP file.
         if ($write) {
-            $updater->writeMapToPhpClassFile($new_map, $current_map->getFileName());
+            $updater->writeMapToPhpClassFile($current_map->getFileName());
             $output->writeln('<comment>Code updated.</comment>');
         } else {
             $output->writeln('<info>No changes to mapping.</info>');
