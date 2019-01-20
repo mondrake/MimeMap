@@ -50,7 +50,8 @@ class UpdateCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $updater = new MapUpdater(MapHandler::map('\FileEye\MimeMap\Map\EmptyMap'));
+        $new_map = MapHandler::map('\FileEye\MimeMap\Map\EmptyMap');
+        $updater = new MapUpdater($new_map);
 
         // Executes on an emtpy map the script commands.
         $commands = Yaml::parse(file_get_contents($input->getOption('script')));
@@ -101,21 +102,6 @@ class UpdateCommand extends Command
 
 
 
-
-
-
-
-
-
-
-        // Applies the overrides.
-        try {
-            $content = file_get_contents($input->getOption('override'));
-            $updater->applyOverrides($new_map, Yaml::parse($content));
-        } catch (\Exception $e) {
-            $output->writeln('<error>' . $e->getMessage() . '</error>');
-            exit(2);
-        }
 
         // Check if anything got changed.
         $write = false;
