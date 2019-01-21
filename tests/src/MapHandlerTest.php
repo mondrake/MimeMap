@@ -65,7 +65,7 @@ class MapHandlerTest extends TestCase
 
         // Remove an existing type-extension pair.
         $this->assertTrue($this->map->removeMapping('text/plain', 'txt'));
-        $this->assertSame(['text', 'conf', 'def', 'list', 'log', 'in'], (new Type('text/plain'))->getExtensions());
+        $this->assertSame(['text', 'conf', 'def', 'list', 'log', 'in', 'asc'], (new Type('text/plain'))->getExtensions());
         $this->assertSame('text', (new Type('text/plain'))->getDefaultExtension());
         $this->assertSame(['application/octet-stream'], (new Extension('txt'))->getTypes(false));
         $this->assertSame('application/octet-stream', (new Extension('txt'))->getDefaultType(false));
@@ -98,9 +98,9 @@ class MapHandlerTest extends TestCase
 
     public function testSetExtensionDefaultType()
     {
-        $this->assertSame(['text/vnd.dvb.subtitle', 'image/vnd.dvb.subtitle'], (new Extension('sub'))->getTypes());
+        $this->assertSame(['text/vnd.dvb.subtitle', 'image/vnd.dvb.subtitle', 'text/x-microdvd', 'text/x-mpsub', 'text/x-subviewer'], (new Extension('sub'))->getTypes());
         $this->map->setExtensionDefaultType('SUB', 'image/vnd.dvb.subtitle');
-        $this->assertSame(['image/vnd.dvb.subtitle', 'text/vnd.dvb.subtitle'], (new Extension('SUB'))->getTypes());
+        $this->assertSame(['image/vnd.dvb.subtitle', 'text/vnd.dvb.subtitle', 'text/x-microdvd', 'text/x-mpsub', 'text/x-subviewer'], (new Extension('SUB'))->getTypes());
     }
 
     /**
