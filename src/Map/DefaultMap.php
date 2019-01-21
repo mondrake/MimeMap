@@ -5,9 +5,9 @@ namespace FileEye\MimeMap\Map;
 /**
  * Class for mapping file extensions to MIME types.
  *
- * This is the default map, taken from the Apache HTTPD documentation website.
+ * This is MimeMap's default map.
  */
-class ApacheMap extends AbstractMap
+class DefaultMap extends AbstractMap
 {
     /**
      * Singleton instance.

@@ -21,7 +21,7 @@ class MapHandlerTest extends TestCase
 
     public function testMap()
     {
-        $this->assertContains('ApacheMap.php', $this->map->getFileName());
+        $this->assertContains('DefaultMap.php', $this->map->getFileName());
     }
 
     public function testSort()
@@ -58,7 +58,7 @@ class MapHandlerTest extends TestCase
 
     public function testRemove()
     {
-        $this->assertSame(['txt', 'text', 'conf', 'def', 'list', 'log', 'in'], (new Type('text/plain'))->getExtensions());
+        $this->assertSame(['txt', 'text', 'conf', 'def', 'list', 'log', 'in', 'asc'], (new Type('text/plain'))->getExtensions());
         $this->assertSame('txt', (new Type('text/plain'))->getDefaultExtension());
         $this->assertSame(['text/plain'], (new Extension('txt'))->getTypes());
         $this->assertSame('text/plain', (new Extension('txt'))->getDefaultType());
