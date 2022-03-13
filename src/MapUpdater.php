@@ -190,7 +190,7 @@ class MapUpdater
         $filter = Yaml::parse(file_get_contents(__DIR__ . '/../resources/' . $yaml_file));
 
         $mime_types = [];
-        foreach ($f as $filter) {
+        foreach ($filter as $f) {
             $mime_types[$f['mimetype']] = true;
         }
 dump($mime_types);
