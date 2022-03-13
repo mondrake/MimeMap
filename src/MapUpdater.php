@@ -188,11 +188,20 @@ class MapUpdater
         $errors = [];
 
         $filter = Yaml::parse(file_get_contents(__DIR__ . '/../resources/' . $yaml_file));
-        $map_types = $this->map->listTypes();
-        $map_aliases = $this->map->listAliases();
+//        $map_types = $this->map->listTypes();
+//        $map_aliases = $this->map->listAliases();
 
         $filter_types = [];
         foreach ($filter as $f) {
+            $type = $this->map->normalizeType($f['mimetype']);
+            if ($this->map->hasType($type)) {
+                $filter_types[$type] = 'type';
+            } elseif ($this->map->hasAlias($type)) {
+                $t = $this->map->getAliasTypes($type);
+                $filter_types[$t[0]] = 'type_a';
+            }
+        }
+/*        foreach ($filter as $f) {
             $filter_types[$f['mimetype']] = $f['mimetype'];
         }
 
@@ -204,8 +213,8 @@ class MapUpdater
                 $t = $this->map->getAliasTypes($type);
                 $x[$t[0]] = 'type_a';
             }
-        }
-dump($x);
+        }*/
+dump($filter_types);
         $this->map->sort();
 
         return $errors;
