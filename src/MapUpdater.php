@@ -193,7 +193,13 @@ class MapUpdater
 
         $filter_types = [];
         foreach ($filter as $f) {
-            $type = $this->map->normalizeType($f['mimetype']);
+            try {
+                $type = $this->map->normalizeType($f['mimetype']);
+            } catch (MalformedTypeException $e) {
+                $error[] = $f['mimetype'] . ' - ' . $e->getMessage();
+                continue;
+            }
+
             if ($this->map->hasType($type)) {
                 $filter_types[$type] = 'type';
             } elseif ($this->map->hasAlias($type)) {
