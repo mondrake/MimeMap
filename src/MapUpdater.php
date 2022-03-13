@@ -188,8 +188,6 @@ class MapUpdater
         $errors = [];
 
         $filter = Yaml::parse(file_get_contents(__DIR__ . '/../resources/' . $yaml_file));
-//        $map_types = $this->map->listTypes();
-//        $map_aliases = $this->map->listAliases();
 
         $filter_types = [];
         foreach ($filter as $f) {
@@ -201,26 +199,17 @@ class MapUpdater
             }
 
             if ($this->map->hasType($type)) {
-                $filter_types[$type] = 'type';
+                $filter_types[$type] = $type;
             } elseif ($this->map->hasAlias($type)) {
                 $t = $this->map->getAliasTypes($type);
-                $filter_types[$t[0]] = 'type_a';
+                $filter_types[$t[0]] = $t[0];
             }
         }
-/*        foreach ($filter as $f) {
-            $filter_types[$f['mimetype']] = $f['mimetype'];
-        }
-
-        $x = [];
-        foreach ($filter_types as $type) {
-            if (in_array($type, $map_types)) {
-                $x[$type] = 'type';
-            } elseif (in_array($type, $map_aliases)) {
-                $t = $this->map->getAliasTypes($type);
-                $x[$t[0]] = 'type_a';
-            }
-        }*/
 dump($filter_types);
+
+        $types_for_removal = array_diff($this->map->listTypes(), $filter_types);
+dump($types_for_removal);
+
         $this->map->sort();
 
         return $errors;
