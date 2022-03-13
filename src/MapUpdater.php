@@ -205,13 +205,16 @@ class MapUpdater
                 $filter_types[$t[0]] = $t[0];
             }
         }
-dump($filter_types);
+//dump($filter_types);
 
         $types_for_removal = array_diff($this->map->listTypes(), $filter_types);
-dump($types_for_removal);
+//dump($types_for_removal);
+        foreach ($types_for_removal as $type) {
+            $this->map->removeType($type);
+        }
 
         $this->map->sort();
-
+dump($this->map);
         return $errors;
     }
 
