@@ -198,15 +198,15 @@ class MapUpdater
 
         $x = [];
         foreach ($filter_types as $type) {
-            if (isset($map_types[$type])) {
+            if (in_array($type, $map_types)) {
                 $x[$type] = 'type';
-            } elseif (isset($map_aliases[$type])) {
+            } elseif (in_array($type, $map_aliases)) {
                 $x[$type] = 'alias';
             } else {
                 $x[$type] = false;
             }
         }
-dump([$map_types, $map_aliases, $x]);
+dump($x);
         $this->map->sort();
 
         return $errors;

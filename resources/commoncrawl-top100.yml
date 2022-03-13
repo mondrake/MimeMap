@@ -986,7 +986,7 @@
     perc_pagescrawl: 0.0007
 -
     crawl: CC-MAIN-2022-05-detected
-    mimetype: image/vnd.dxf; format=ascii
+    mimetype: image/vnd.dxf
     pages: 11740
     urls: 11740
     perc_pagescrawl: 0.0004
