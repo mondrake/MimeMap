@@ -206,7 +206,7 @@ class MapUpdater
                 $x[$type] = false;
             }
         }
-dump($x);
+dump([$map_types, $map_aliases, $x]);
         $this->map->sort();
 
         return $errors;
