@@ -201,7 +201,8 @@ class MapUpdater
             if (in_array($type, $map_types)) {
                 $x[$type] = 'type';
             } elseif (in_array($type, $map_aliases)) {
-                $x[$type] = 'alias';
+                $t = $this->map->getAliasTypes($type);
+                $x[$type] = 'alias ' . implode(' ', $t);
             } else {
                 $x[$type] = false;
             }
