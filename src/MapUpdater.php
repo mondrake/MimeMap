@@ -202,7 +202,6 @@ class MapUpdater
                 $x[$type] = 'type';
             } elseif (in_array($type, $map_aliases)) {
                 $t = $this->map->getAliasTypes($type);
-                $x[$type] = 'alias ' . $t[0];
                 $x[$t[0]] = 'type_a';
             }
         }
