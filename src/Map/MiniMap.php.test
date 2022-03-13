@@ -18,9 +18,7 @@ class MiniMap extends AbstractMap
     protected static $instance;
 
     /**
-     * Returns this file's fully qualified filename.
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getFileName()
     {

@@ -5,14 +5,14 @@ namespace FileEye\MimeMap\Map;
 /**
  * Class for mapping file extensions to MIME types.
  *
- * This is MimeMap's default map.
+ * This is MimeMap's full map.
  */
-class DefaultMap extends AbstractMap
+class FullMap extends AbstractMap
 {
     /**
      * Singleton instance.
      *
-     * @var DefaultMap
+     * @var FullMap
      */
     protected static $instance;
 
@@ -22,14 +22,6 @@ class DefaultMap extends AbstractMap
     public function getFileName()
     {
         return __FILE__;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function fallbackMap()
-    {
-        return FullMap::class;
     }
 
     /**
