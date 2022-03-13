@@ -3,6 +3,7 @@
 namespace FileEye\MimeMap;
 
 use FileEye\MimeMap\Map\AbstractMap;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Compiles the MIME type to file extension map.
@@ -165,6 +166,29 @@ class MapUpdater
             }
         }
         $this->map->sort();
+
+        return $errors;
+    }
+
+    /**
+     * @todo
+     *
+     * @param string $yaml_file
+     *   A YAML file with the list of MIME-types to actually pick from the
+     *   currently loaded map.
+     *
+     * @return string[]
+     *   An array of error messages.
+     *
+     * @throws \RuntimeException
+     *   If it was not possible to access the file.
+     */
+    public function filterWithList($yaml_file)
+    {
+        $errors = [];
+
+        $filter = Yaml::parse(file_get_contents(__DIR__ . '/../resources/' . $yaml_file));
+dump($filter);
 
         return $errors;
     }
