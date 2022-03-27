@@ -233,7 +233,6 @@ dump('************ ROUND **************');
         }
 */
         $types_for_removal = array_diff($this->map->listTypes(), $filter_types);
-//dump($types_for_removal);
         foreach ($types_for_removal as $type) {
             $this->map->removeType($type);
         }
