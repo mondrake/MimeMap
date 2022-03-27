@@ -2,7 +2,7 @@
 
 namespace FileEye\MimeMap\Map;
 
-@trigger_error('deprecated', E_USER_DEPRECATED);
+throw new \Exception('should not!');
 
 /**
  * Class for mapping file extensions to MIME types.
