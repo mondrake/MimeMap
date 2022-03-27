@@ -23,7 +23,7 @@ class MapHandlerTest extends MimeMapTestBase
 
     public function testMap()
     {
-        $this->assertStringContainsString('DefaultMap.php', $this->map->getFileName());
+        $this->assertStringContainsString('FullMap.php', $this->map->getFileName());
     }
 
     public function testSort()
