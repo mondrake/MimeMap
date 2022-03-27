@@ -2,8 +2,6 @@
 
 namespace FileEye\MimeMap\Map;
 
-throw new \Exception('should not!');
-
 /**
  * Class for mapping file extensions to MIME types.
  *

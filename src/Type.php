@@ -319,6 +319,9 @@ class Type implements TypeInterface
      */
     public function isAlias()
     {
+        if ($this->map->hasType($this->toString(static::SHORT_TEXT))) {
+            return false;
+        }
         return $this->map->hasAlias($this->toString(static::SHORT_TEXT));
     }
 
@@ -519,6 +522,25 @@ class Type implements TypeInterface
      */
     public function getExtensions($strict = true)
     {
+        if (!$this->isWildcard()) {
+            $subject = $this->toString(static::SHORT_TEXT);
+
+            $extensions = $this->map->getTypeExtensions($subject);
+            if (empty($extensions) && $this->map->fallbackMap()) {
+                $this->map = MapHandler::map($this->map->fallbackMap());
+                $extensions = $this->map->getTypeExtensions($subject);
+            }
+
+            // No extension found, throw exception or return emtpy array.
+            if (empty($extensions)) {
+                if ($strict) {
+                    throw new MappingException('No MIME type found for ' . $subject . ' in map');
+                } else {
+                    return [];
+                }
+            }
+        }
+
         // Build the array of extensions.
         $extensions = [];
         foreach ($this->getUnaliasedType()->buildTypesList($strict) as $t) {
