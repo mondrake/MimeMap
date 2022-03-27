@@ -187,25 +187,42 @@ class MapUpdater
     {
         $errors = [];
 
+        // Get the raw filter from the user file.
         $filter = Yaml::parse(file_get_contents(__DIR__ . '/../resources/' . $yaml_file));
 
+        // Clean the raw filter, make each MIME type unique.
         $filter_types = [];
         foreach ($filter as $f) {
             try {
                 $type = $this->map->normalizeType($f['mimetype']);
             } catch (MalformedTypeException $e) {
-                $error[] = $f['mimetype'] . ' - ' . $e->getMessage();
+                $errors[] = $f['mimetype'] . ' - ' . $e->getMessage();
                 continue;
             }
 
             if ($this->map->hasType($type)) {
                 $filter_types[$type] = $type;
             } elseif ($this->map->hasAlias($type)) {
+                // If the filter type is an alias, add the parent.
                 $t = $this->map->getAliasTypes($type);
+                // @todo ensure $t has only one entry.
                 $filter_types[$t[0]] = $t[0];
             }
         }
-//dump($filter_types);
+dump($errors);
+
+        // Add MIME types that are inducted by additional extensions associated
+        // to the filtered ones.
+        $add_types = [];
+        foreach ($filter_types as $type) {
+            foreach ($this->map->getTypeExtensions($type) as $ext) {
+                foreach ($ext->getExtensionTypes($ext) as $ext_type) {
+                    if (!in_array($ext_type, $filter_types)) {
+                        dump([$t, $ext, $ext_type]);
+                    }
+                }
+            }
+        }
 
         $types_for_removal = array_diff($this->map->listTypes(), $filter_types);
 //dump($types_for_removal);
