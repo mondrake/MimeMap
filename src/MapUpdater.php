@@ -209,19 +209,26 @@ class MapUpdater
                 $filter_types[$t[0]] = $t[0];
             }
         }
-dump($errors);
 
         // Add MIME types that are inducted by additional extensions associated
         // to the filtered ones.
-        $add_types = [];
-        foreach ($filter_types as $type) {
-            foreach ($this->map->getTypeExtensions($type) as $ext) {
-                foreach ($this->map->getExtensionTypes($ext) as $ext_type) {
-                    if (!in_array($ext_type, $filter_types)) {
-                        dump([$t, $ext, $ext_type]);
+        while (true) {
+dump('************ ROUND **************');
+            $add_types = [];
+            foreach ($filter_types as $type) {
+                foreach ($this->map->getTypeExtensions($type) as $ext) {
+                    foreach ($this->map->getExtensionTypes($ext) as $ext_type) {
+                        if (!in_array($ext_type, $filter_types)) {
+                            dump([$type, $ext, $ext_type]);
+                            $add_types[$ext_type] = $ext_type;
+                        }
                     }
                 }
             }
+            if ($add_types === []) {
+                break;
+            }
+            $filter_types = array_merge($filter_types, $add_types);
         }
 
         $types_for_removal = array_diff($this->map->listTypes(), $filter_types);
