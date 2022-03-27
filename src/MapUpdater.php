@@ -244,6 +244,12 @@ dump('************ ROUND **************');
                 dump([$type, $this->map->getTypeExtensions($type), $source_map_array['t'][$type]['e']]);
             }
         }
+        foreach ($this->map->listExtensions() as $extension) {
+            if ($this->map->getExtensionTypes($extension) !== $source_map_array['e'][$extension]['t']) {
+                dump([$type, $this->map->getExtensionTypes($extension), $source_map_array['e'][$extension]['t']]);
+            }
+        }
+
 
 //dump($this->map);
         return $errors;
