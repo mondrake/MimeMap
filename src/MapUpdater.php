@@ -246,7 +246,12 @@ dump('************ ROUND **************');
         }
         foreach ($this->map->listExtensions() as $extension) {
             if ($this->map->getExtensionTypes($extension) !== $source_map_array['e'][$extension]['t']) {
-                dump([$type, $this->map->getExtensionTypes($extension), $source_map_array['e'][$extension]['t']]);
+                dump([$extension, $this->map->getExtensionTypes($extension), $source_map_array['e'][$extension]['t']]);
+            }
+        }
+        foreach ($this->map->listAliases() as $alias) {
+            if ($this->map->getAliasTypes($alias) !== $source_map_array['a'][$alias]['t']) {
+                dump([$alias, $this->map->getAliasTypes($alias), $source_map_array['a'][$alias]['t']]);
             }
         }
 
