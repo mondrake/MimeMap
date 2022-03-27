@@ -67,6 +67,10 @@ class Extension
     public function getTypes($strict = true)
     {
         $types = $this->map->getExtensionTypes($this->extension);
+        if (empty($types) && $this->map->fallbackMap()) {
+            $this->map = MapHandler::map($this->map->fallbackMap());
+            $types = $this->map->getExtensionTypes($this->extension);
+        }
         if (empty($types)) {
             if ($strict) {
                 throw new MappingException('No MIME type mapped to extension ' . $this->extension);
