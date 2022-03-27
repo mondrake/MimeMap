@@ -372,6 +372,10 @@ class Type implements TypeInterface
      */
     protected function buildTypesList($strict = true)
     {
+        // @todo verify this is only run when necessary as it kicks the fallback
+        // map.
+        $this->map = MapHandler::map($this->map->fallbackMap());
+
         $subject = $this->toString(static::SHORT_TEXT);
 
         // Find all types.
