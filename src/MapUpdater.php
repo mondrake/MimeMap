@@ -216,7 +216,7 @@ dump($errors);
         $add_types = [];
         foreach ($filter_types as $type) {
             foreach ($this->map->getTypeExtensions($type) as $ext) {
-                foreach ($ext->getExtensionTypes($ext) as $ext_type) {
+                foreach ($this->map->getExtensionTypes($ext) as $ext_type) {
                     if (!in_array($ext_type, $filter_types)) {
                         dump([$t, $ext, $ext_type]);
                     }
