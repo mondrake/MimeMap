@@ -185,6 +185,7 @@ class MapUpdater
      */
     public function filterWithList($yaml_file)
     {
+        $source_map_array = $this->map->getMapArray();
         $errors = [];
 
         // Get the raw filter from the user file.
@@ -212,7 +213,7 @@ class MapUpdater
 
         // Add MIME types that are inducted by additional extensions associated
         // to the filtered ones.
-        while (true) {
+/*        while (true) {
 dump('************ ROUND **************');
             $add_types = [];
             foreach ($filter_types as $type) {
@@ -230,7 +231,7 @@ dump('************ ROUND **************');
             }
             $filter_types = array_merge($filter_types, $add_types);
         }
-
+*/
         $types_for_removal = array_diff($this->map->listTypes(), $filter_types);
 //dump($types_for_removal);
         foreach ($types_for_removal as $type) {
@@ -238,7 +239,14 @@ dump('************ ROUND **************');
         }
 
         $this->map->sort();
-dump($this->map);
+
+        foreach ($this->map->listTypes() as $type) {
+            if ($this->map->getTypeExtensions($type) !== $source_map_array['t'][$type]['e']) {
+                dump([$type, $this->map->getTypeExtensions($type), $source_map_array['t'][$type]['e']]);
+            }
+        }
+
+//dump($this->map);
         return $errors;
     }
 
