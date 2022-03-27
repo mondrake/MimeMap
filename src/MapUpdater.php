@@ -213,7 +213,7 @@ class MapUpdater
 
         // Add MIME types that are inducted by additional extensions associated
         // to the filtered ones.
-/*        while (true) {
+        while (true) {
 dump('************ ROUND **************');
             $add_types = [];
             foreach ($filter_types as $type) {
@@ -225,13 +225,21 @@ dump('************ ROUND **************');
                         }
                     }
                 }
+                foreach ($this->map->getTypeAliases($type) as $alias) {
+                    foreach ($this->map->getAliasTypes($alias) as $alias_type) {
+                        if (!in_array($alias_type, $filter_types)) {
+                            dump([$type, $alias, $alias_type]);
+                            $add_types[$alias_type] = $alias_type;
+                        }
+                    }
+                }
             }
             if ($add_types === []) {
                 break;
             }
             $filter_types = array_merge($filter_types, $add_types);
         }
-*/
+
         $types_for_removal = array_diff($this->map->listTypes(), $filter_types);
         foreach ($types_for_removal as $type) {
             $this->map->removeType($type);
