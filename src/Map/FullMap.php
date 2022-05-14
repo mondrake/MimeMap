@@ -12,14 +12,11 @@ class FullMap extends AbstractMap
     /**
      * Singleton instance.
      *
-     * @var FullMap
+     * @var MapInterface
      */
     protected static $instance;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getFileName()
+    public function getFileName(): string
     {
         return __FILE__;
     }
