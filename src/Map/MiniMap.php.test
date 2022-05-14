@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace FileEye\MimeMap\Map;
 
@@ -11,16 +11,11 @@ namespace FileEye\MimeMap\Map;
 class MiniMap extends AbstractMap
 {
     /**
-     * Singleton instance.
-     *
-     * @var MiniMap
+     * @var MapInterface
      */
     protected static $instance;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getFileName()
+    public function getFileName(): string
     {
         return __FILE__;
     }

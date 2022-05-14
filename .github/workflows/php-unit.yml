@@ -17,10 +17,6 @@ jobs:
       fail-fast: false
       matrix:
         php-version:
-#          - "5.6"
-#          - "7.0"
-#          - "7.1"
-#          - "7.2"
 #          - "7.3"
 #          - "7.4"
           - "8.0"
@@ -34,14 +30,19 @@ jobs:
           uses: "shivammathur/setup-php@v2"
           with:
             php-version: "${{ matrix.php-version }}"
-            coverage: "none"
+            coverage: "pcov"
             ini-values: "zend.assertions=1"
 
         - name: Install Composer dependencies
           run: composer install --no-progress --ansi
 
         - name: Run tests
-          run: ./vendor/bin/phpunit --color=always
+          run: ./vendor/bin/phpunit --color=always --coverage-clover=coverage.xml
+
+        - name: Send code coverage report to Codecov.io
+          uses: codecov/codecov-action@v2
+          with:
+            files: coverage.xml
 
         - name: Mapping test
           if: ${{ matrix.php-version == 7.4 }}
