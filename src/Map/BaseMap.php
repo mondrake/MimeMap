@@ -38,6 +38,17 @@ abstract class BaseMap implements MapInterface
     {
     }
 
+    /**
+     * Returns the fallback map class name.
+     *
+     * @return string|null
+     *   The fallback map class name, if available, or null.
+     */
+    public static function fallbackMap()
+    {
+        return null;
+    }
+
     public function backup(): void
     {
         static::$backupMap = static::$map;

@@ -1,0 +1,1190 @@
+# Statistics of Common Crawl Monthly Archives
+# https://commoncrawl.github.io/cc-crawl-statistics/plots/mimetypes
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: <other>
+    pages: 2538000
+    urls: 2533118
+    perc_pagescrawl: 0.0850
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/atom+xml
+    pages: 2442704
+    urls: 2442561
+    perc_pagescrawl: 0.0818
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/download
+    pages: 88190
+    urls: 88181
+    perc_pagescrawl: 0.0030
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/epub+zip
+    pages: 60654
+    urls: 60624
+    perc_pagescrawl: 0.0020
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/force-download
+    pages: 133313
+    urls: 133304
+    perc_pagescrawl: 0.0045
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/javascript
+    pages: 6140
+    urls: 6137
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/json
+    pages: 835105
+    urls: 834888
+    perc_pagescrawl: 0.0280
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/ld+json
+    pages: 26254
+    urls: 26243
+    perc_pagescrawl: 0.0009
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/marc
+    pages: 14089
+    urls: 14089
+    perc_pagescrawl: 0.0005
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/msword
+    pages: 100158
+    urls: 99951
+    perc_pagescrawl: 0.0034
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/octet-stream
+    pages: 1586448
+    urls: 1584890
+    perc_pagescrawl: 0.0531
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/octetstream
+    pages: 9642
+    urls: 9638
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/pdf
+    pages: 25020936
+    urls: 24963211
+    perc_pagescrawl: 0.8378
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/pgp-encrypted
+    pages: 3383
+    urls: 3383
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/pgp-signature
+    pages: 65144
+    urls: 65143
+    perc_pagescrawl: 0.0022
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/postscript
+    pages: 5670
+    urls: 5663
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/rdf+xml
+    pages: 143064
+    urls: 143053
+    perc_pagescrawl: 0.0048
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/rss+xml
+    pages: 2014466
+    urls: 2013023
+    perc_pagescrawl: 0.0675
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/rtf
+    pages: 29841
+    urls: 29840
+    perc_pagescrawl: 0.0010
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/save-to-disk
+    pages: 112
+    urls: 112
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/text
+    pages: 70343
+    urls: 70342
+    perc_pagescrawl: 0.0024
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/unknown
+    pages: 11105
+    urls: 11104
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.android.package-archive
+    pages: 11683
+    urls: 11609
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.google-earth.kml+xml
+    pages: 53786
+    urls: 53759
+    perc_pagescrawl: 0.0018
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.google-earth.kmz
+    pages: 24335
+    urls: 24334
+    perc_pagescrawl: 0.0008
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.ms-excel
+    pages: 69088
+    urls: 68912
+    perc_pagescrawl: 0.0023
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.ms-powerpoint
+    pages: 20671
+    urls: 20668
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.ms-word
+    pages: 21260
+    urls: 21260
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.ms-word.document.macroenabled.12
+    pages: 594
+    urls: 592
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.oasis.opendocument.text
+    pages: 28004
+    urls: 28000
+    perc_pagescrawl: 0.0009
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.openxmlformats-officedocument.presentationml.presentation
+    pages: 8136
+    urls: 8061
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    pages: 52306
+    urls: 52175
+    perc_pagescrawl: 0.0018
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    pages: 78521
+    urls: 78321
+    perc_pagescrawl: 0.0026
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/vnd.wap.xhtml+xml
+    pages: 6448
+    urls: 6431
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-bibtex
+    pages: 104295
+    urls: 104295
+    perc_pagescrawl: 0.0035
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-bittorrent
+    pages: 6465
+    urls: 6464
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-debian-package
+    pages: 644
+    urls: 643
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-download
+    pages: 55395
+    urls: 54993
+    perc_pagescrawl: 0.0019
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-endnote-refer
+    pages: 125858
+    urls: 125858
+    perc_pagescrawl: 0.0042
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-gzip
+    pages: 37976
+    urls: 37970
+    perc_pagescrawl: 0.0013
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-httpd-php
+    pages: 8874
+    urls: 8829
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-java-jnlp-file
+    pages: 14449
+    urls: 14398
+    perc_pagescrawl: 0.0005
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-javascript
+    pages: 5977
+    urls: 5917
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-json
+    pages: 45
+    urls: 45
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-mobipocket-ebook
+    pages: 5796
+    urls: 5794
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-msdownload
+    pages: 10981
+    urls: 10840
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-netcdf
+    pages: 13623
+    urls: 13623
+    perc_pagescrawl: 0.0005
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-rar-compressed
+    pages: 4335
+    urls: 4333
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-research-info-systems
+    pages: 284311
+    urls: 284310
+    perc_pagescrawl: 0.0095
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-shockwave-flash
+    pages: 9599
+    urls: 9572
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-tar
+    pages: 23559
+    urls: 23556
+    perc_pagescrawl: 0.0008
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-tex
+    pages: 7085
+    urls: 7082
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-troff-man
+    pages: 18140
+    urls: 18135
+    perc_pagescrawl: 0.0006
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/x-zip-compressed
+    pages: 28282
+    urls: 28201
+    perc_pagescrawl: 0.0009
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/xhtml+xml
+    pages: 1659722
+    urls: 1658548
+    perc_pagescrawl: 0.0556
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/xml
+    pages: 964988
+    urls: 964294
+    perc_pagescrawl: 0.0323
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: application/zip
+    pages: 195705
+    urls: 194958
+    perc_pagescrawl: 0.0066
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: audio/mp3
+    pages: 5819
+    urls: 5816
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: audio/mp4
+    pages: 404
+    urls: 403
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: audio/mpeg
+    pages: 105007
+    urls: 103573
+    perc_pagescrawl: 0.0035
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: audio/x-mpegurl
+    pages: 27408
+    urls: 27368
+    perc_pagescrawl: 0.0009
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: audio/x-pn-realaudio
+    pages: 2679
+    urls: 2679
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: audio/x-scpls
+    pages: 3559
+    urls: 3549
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: audio/x-wav
+    pages: 5077
+    urls: 4969
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: binary/octet-stream
+    pages: 21702
+    urls: 21667
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/gif
+    pages: 172437
+    urls: 172088
+    perc_pagescrawl: 0.0058
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/jp2
+    pages: 1534
+    urls: 1534
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/jpeg
+    pages: 4449886
+    urls: 4441925
+    perc_pagescrawl: 0.1490
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/jpg
+    pages: 75572
+    urls: 75328
+    perc_pagescrawl: 0.0025
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/pjpeg
+    pages: 62107
+    urls: 62107
+    perc_pagescrawl: 0.0021
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/png
+    pages: 754835
+    urls: 752819
+    perc_pagescrawl: 0.0253
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/svg+xml
+    pages: 27601
+    urls: 27584
+    perc_pagescrawl: 0.0009
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/tiff
+    pages: 16916
+    urls: 16915
+    perc_pagescrawl: 0.0006
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/vnd.djvu
+    pages: 15026
+    urls: 15024
+    perc_pagescrawl: 0.0005
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: image/webp
+    pages: 11718
+    urls: 11609
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: message/rfc822
+    pages: 14319
+    urls: 14318
+    perc_pagescrawl: 0.0005
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/calendar
+    pages: 1024586
+    urls: 1024429
+    perc_pagescrawl: 0.0343
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/css
+    pages: 12144
+    urls: 12112
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/csv
+    pages: 171155
+    urls: 171102
+    perc_pagescrawl: 0.0057
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/enriched
+    pages: 29158
+    urls: 29158
+    perc_pagescrawl: 0.0010
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/html
+    pages: 2935178256
+    urls: 2919958170
+    perc_pagescrawl: 98.2851
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/javascript
+    pages: 11717
+    urls: 11689
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/pdf
+    pages: 595
+    urls: 595
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/plain
+    pages: 2323250
+    urls: 2322491
+    perc_pagescrawl: 0.0778
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/tab-separated-values
+    pages: 24611
+    urls: 24611
+    perc_pagescrawl: 0.0008
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/turtle
+    pages: 54722
+    urls: 54719
+    perc_pagescrawl: 0.0018
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/vcard
+    pages: 39372
+    urls: 39367
+    perc_pagescrawl: 0.0013
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/vnd.wap.wml
+    pages: 2593
+    urls: 2573
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/x-bibtex
+    pages: 18821
+    urls: 18817
+    perc_pagescrawl: 0.0006
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/x-c
+    pages: 16775
+    urls: 16775
+    perc_pagescrawl: 0.0006
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/x-csrc
+    pages: 28118
+    urls: 28118
+    perc_pagescrawl: 0.0009
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/x-diff
+    pages: 8633
+    urls: 8626
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/x-patch
+    pages: 26698
+    urls: 26683
+    perc_pagescrawl: 0.0009
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/x-perl
+    pages: 2958
+    urls: 2958
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/x-vcalendar
+    pages: 13362
+    urls: 13362
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/x-vcard
+    pages: 63781
+    urls: 63759
+    perc_pagescrawl: 0.0021
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: text/xml
+    pages: 2311054
+    urls: 2308477
+    perc_pagescrawl: 0.0774
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: unknown/unknown
+    pages: 15377
+    urls: 15377
+    perc_pagescrawl: 0.0005
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: video/mp4
+    pages: 63395
+    urls: 63143
+    perc_pagescrawl: 0.0021
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: video/webm
+    pages: 3223
+    urls: 3223
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05
+    mimetype: video/x-ms-asf
+    pages: 8373
+    urls: 8372
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: <other>
+    pages: 516842
+    urls: 516268
+    perc_pagescrawl: 0.0173
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/atom+xml
+    pages: 2593808
+    urls: 2593458
+    perc_pagescrawl: 0.0869
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/epub+zip
+    pages: 74019
+    urls: 73984
+    perc_pagescrawl: 0.0025
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/gzip
+    pages: 82373
+    urls: 82262
+    perc_pagescrawl: 0.0028
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/javascript
+    pages: 23662
+    urls: 23571
+    perc_pagescrawl: 0.0008
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/json
+    pages: 809975
+    urls: 809754
+    perc_pagescrawl: 0.0271
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/marc
+    pages: 51701
+    urls: 51701
+    perc_pagescrawl: 0.0017
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/mbox
+    pages: 129493
+    urls: 129457
+    perc_pagescrawl: 0.0043
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/msword
+    pages: 73117
+    urls: 72925
+    perc_pagescrawl: 0.0024
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/octet-stream
+    pages: 746239
+    urls: 745535
+    perc_pagescrawl: 0.0250
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/pdf
+    pages: 25454705
+    urls: 25396339
+    perc_pagescrawl: 0.8524
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/pgp-signature
+    pages: 85984
+    urls: 85982
+    perc_pagescrawl: 0.0029
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/pkcs7-signature
+    pages: 10426
+    urls: 10425
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/postscript
+    pages: 3942
+    urls: 3941
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/rdf+xml
+    pages: 343004
+    urls: 342941
+    perc_pagescrawl: 0.0115
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/rss+xml
+    pages: 3562381
+    urls: 3558754
+    perc_pagescrawl: 0.1193
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/rtf
+    pages: 59023
+    urls: 59021
+    perc_pagescrawl: 0.0020
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/text
+    pages: 12077
+    urls: 12077
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/vnd.android.package-archive
+    pages: 7267
+    urls: 7152
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/vnd.google-earth.kml+xml
+    pages: 74375
+    urls: 74348
+    perc_pagescrawl: 0.0025
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/vnd.google-earth.kmz
+    pages: 24690
+    urls: 24688
+    perc_pagescrawl: 0.0008
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/vnd.ms-excel
+    pages: 47428
+    urls: 47267
+    perc_pagescrawl: 0.0016
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/vnd.ms-powerpoint
+    pages: 20219
+    urls: 20216
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/vnd.oasis.opendocument.text
+    pages: 32667
+    urls: 32661
+    perc_pagescrawl: 0.0011
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/vnd.openxmlformats-officedocument.presentationml.presentation
+    pages: 7907
+    urls: 7832
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    pages: 51197
+    urls: 51053
+    perc_pagescrawl: 0.0017
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    pages: 76264
+    urls: 76047
+    perc_pagescrawl: 0.0026
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-bibtex-text-file
+    pages: 256154
+    urls: 256148
+    perc_pagescrawl: 0.0086
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-bittorrent
+    pages: 9317
+    urls: 9309
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-bzip2
+    pages: 22120
+    urls: 22113
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-debian-package
+    pages: 1165
+    urls: 1157
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-dosexec
+    pages: 6501
+    urls: 6241
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-endnote-refer
+    pages: 73599
+    urls: 73599
+    perc_pagescrawl: 0.0025
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-hdf
+    pages: 14558
+    urls: 14558
+    perc_pagescrawl: 0.0005
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-mobipocket-ebook
+    pages: 14145
+    urls: 14139
+    perc_pagescrawl: 0.0005
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-ms-asx
+    pages: 5687
+    urls: 5686
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-msdownload
+    pages: 4290
+    urls: 4226
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-rar-compressed
+    pages: 360
+    urls: 360
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-research-info-systems
+    pages: 7411
+    urls: 7411
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-sh
+    pages: 45421
+    urls: 45403
+    perc_pagescrawl: 0.0015
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-shockwave-flash
+    pages: 10013
+    urls: 9986
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-stata-do
+    pages: 38614
+    urls: 38613
+    perc_pagescrawl: 0.0013
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-tika-msoffice
+    pages: 98580
+    urls: 98562
+    perc_pagescrawl: 0.0033
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-tika-ooxml
+    pages: 87054
+    urls: 87025
+    perc_pagescrawl: 0.0029
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-wais-source
+    pages: 7670
+    urls: 7670
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/x-xz
+    pages: 22062
+    urls: 22061
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/xhtml+xml
+    pages: 419969054
+    urls: 417838306
+    perc_pagescrawl: 14.0628
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/xml
+    pages: 2323465
+    urls: 2321012
+    perc_pagescrawl: 0.0778
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/zip
+    pages: 323605
+    urls: 321883
+    perc_pagescrawl: 0.0108
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/zlib
+    pages: 6432
+    urls: 6403
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: application/zstd
+    pages: 54351
+    urls: 54349
+    perc_pagescrawl: 0.0018
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: audio/midi
+    pages: 1304
+    urls: 1304
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: audio/mp4
+    pages: 1806
+    urls: 1792
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: audio/mpeg
+    pages: 159944
+    urls: 158095
+    perc_pagescrawl: 0.0054
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: audio/vnd.wave
+    pages: 20192
+    urls: 20083
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: audio/x-mpegurl
+    pages: 7890
+    urls: 7888
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/bmp
+    pages: 3661
+    urls: 3661
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/gif
+    pages: 145430
+    urls: 145063
+    perc_pagescrawl: 0.0049
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/jpeg
+    pages: 4856181
+    urls: 4848026
+    perc_pagescrawl: 0.1626
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/png
+    pages: 744267
+    urls: 742253
+    perc_pagescrawl: 0.0249
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/svg+xml
+    pages: 29708
+    urls: 29690
+    perc_pagescrawl: 0.0010
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/tiff
+    pages: 52423
+    urls: 52422
+    perc_pagescrawl: 0.0018
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/vnd.djvu
+    pages: 19428
+    urls: 19426
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/vnd.dxf
+    pages: 11740
+    urls: 11740
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/vnd.microsoft.icon
+    pages: 6930
+    urls: 6875
+    perc_pagescrawl: 0.0002
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: image/webp
+    pages: 12985
+    urls: 12879
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: message/rfc822
+    pages: 92925
+    urls: 92895
+    perc_pagescrawl: 0.0031
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/calendar
+    pages: 1094160
+    urls: 1093999
+    perc_pagescrawl: 0.0366
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/css
+    pages: 11891
+    urls: 11859
+    perc_pagescrawl: 0.0004
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/csv
+    pages: 148532
+    urls: 148479
+    perc_pagescrawl: 0.0050
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/html
+    pages: 2515948973
+    urls: 2502857817
+    perc_pagescrawl: 84.2471
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/plain
+    pages: 3558432
+    urls: 3557096
+    perc_pagescrawl: 0.1192
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/prs.lines.tag
+    pages: 104115
+    urls: 104114
+    perc_pagescrawl: 0.0035
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/tab-separated-values
+    pages: 25510
+    urls: 25510
+    perc_pagescrawl: 0.0009
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/troff
+    pages: 20589
+    urls: 20589
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/turtle
+    pages: 48277
+    urls: 48274
+    perc_pagescrawl: 0.0016
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/vtt
+    pages: 19911
+    urls: 19908
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-c++src
+    pages: 20959
+    urls: 20959
+    perc_pagescrawl: 0.0007
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-chdr
+    pages: 49225
+    urls: 49225
+    perc_pagescrawl: 0.0016
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-csrc
+    pages: 76451
+    urls: 76449
+    perc_pagescrawl: 0.0026
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-diff
+    pages: 67682
+    urls: 67651
+    perc_pagescrawl: 0.0023
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-jsp
+    pages: 4286
+    urls: 4279
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-log
+    pages: 82203
+    urls: 82201
+    perc_pagescrawl: 0.0028
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-matlab
+    pages: 99150
+    urls: 99149
+    perc_pagescrawl: 0.0033
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-patch
+    pages: 7976
+    urls: 7976
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-perl
+    pages: 80967
+    urls: 80963
+    perc_pagescrawl: 0.0027
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-php
+    pages: 108246
+    urls: 107825
+    perc_pagescrawl: 0.0036
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-python
+    pages: 30195
+    urls: 30195
+    perc_pagescrawl: 0.0010
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-vcalendar
+    pages: 15639
+    urls: 15639
+    perc_pagescrawl: 0.0005
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-vcard
+    pages: 125851
+    urls: 125817
+    perc_pagescrawl: 0.0042
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: text/x-web-markdown
+    pages: 17789
+    urls: 17787
+    perc_pagescrawl: 0.0006
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: video/mp4
+    pages: 65279
+    urls: 65026
+    perc_pagescrawl: 0.0022
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: video/quicktime
+    pages: 8592
+    urls: 8589
+    perc_pagescrawl: 0.0003
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: video/webm
+    pages: 3209
+    urls: 3209
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: video/x-m4v
+    pages: 1604
+    urls: 1603
+    perc_pagescrawl: 0.0001
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: video/x-matroska
+    pages: 657
+    urls: 657
+    perc_pagescrawl: 0.0000
+-
+    crawl: CC-MAIN-2022-05-detected
+    mimetype: video/x-ms-wmv
+    pages: 2453
+    urls: 2444
+    perc_pagescrawl: 0.0001

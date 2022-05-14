@@ -37,6 +37,10 @@ class Extension implements ExtensionInterface
     public function getTypes(): array
     {
         $types = $this->map->getExtensionTypes($this->extension);
+        if (empty($types) && $this->map->fallbackMap()) {
+            $this->map = MapHandler::map($this->map->fallbackMap());
+            $types = $this->map->getExtensionTypes($this->extension);
+        }
         if (!empty($types)) {
             return $types;
         }

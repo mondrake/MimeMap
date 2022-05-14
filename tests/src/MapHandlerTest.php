@@ -4,6 +4,7 @@ namespace FileEye\MimeMap\Test;
 
 use FileEye\MimeMap\Extension;
 use FileEye\MimeMap\MalformedTypeException;
+use FileEye\MimeMap\Map\FullMap;
 use FileEye\MimeMap\Map\MimeMapInterface;
 use FileEye\MimeMap\MapHandler;
 use FileEye\MimeMap\MappingException;
@@ -21,12 +22,12 @@ class MapHandlerTest extends MimeMapTestBase
 
     public function setUp(): void
     {
-        $this->map = MapHandler::map();
+        $this->map = MapHandler::map(FullMap::class);
     }
 
     public function testMap(): void
     {
-        $this->assertStringContainsString('DefaultMap.php', $this->map->getFileName());
+        $this->assertStringContainsString('FullMap.php', $this->map->getFileName());
     }
 
     public function testSort(): void

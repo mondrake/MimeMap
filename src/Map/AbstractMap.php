@@ -24,7 +24,7 @@ abstract class AbstractMap extends BaseMap implements MimeMapInterface
      * @return string
      *   A MIME type string in the 'Media/Subtype' format.
      */
-    protected function normalizeType(string $type_string): string
+    public function normalizeType(string $type_string): string
     {
         // Media and SubType are separated by a slash '/'.
         $media = TypeParser::parseStringPart($type_string, 0, '/');

@@ -4,6 +4,7 @@ namespace FileEye\MimeMap;
 
 use FileEye\MimeMap\Map\EmptyMap;
 use FileEye\MimeMap\Map\MimeMapInterface;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Compiles the MIME type to file extension map.
@@ -187,6 +188,104 @@ class MapUpdater
         }
         $this->map->sort();
 
+        return $errors;
+    }
+
+    /**
+     * @todo
+     *
+     * @param string $yaml_file
+     *   A YAML file with the list of MIME-types to actually pick from the
+     *   currently loaded map.
+     *
+     * @return string[]
+     *   An array of error messages.
+     *
+     * @throws \RuntimeException
+     *   If it was not possible to access the file.
+     */
+    public function filterWithList($yaml_file)
+    {
+        $source_map_array = $this->map->getMapArray();
+        $errors = [];
+
+        // Get the raw filter from the user file.
+        $filter = Yaml::parse(file_get_contents(__DIR__ . '/../resources/' . $yaml_file));
+
+        // Clean the raw filter, make each MIME type unique.
+        $filter_types = [];
+        foreach ($filter as $f) {
+            try {
+                $type = $this->map->normalizeType($f['mimetype']);
+            } catch (MalformedTypeException $e) {
+                $errors[] = $f['mimetype'] . ' - ' . $e->getMessage();
+                continue;
+            }
+
+            if ($this->map->hasType($type)) {
+                $filter_types[$type] = $type;
+            } elseif ($this->map->hasAlias($type)) {
+                // If the filter type is an alias, add the parent.
+                $t = $this->map->getAliasTypes($type);
+                // @todo ensure $t has only one entry.
+                $filter_types[$t[0]] = $t[0];
+            }
+        }
+
+        // Add MIME types that are inducted by additional extensions associated
+        // to the filtered ones.
+        while (true) {
+dump('************ ROUND **************');
+            $add_types = [];
+            foreach ($filter_types as $type) {
+                foreach ($this->map->getTypeExtensions($type) as $ext) {
+                    foreach ($this->map->getExtensionTypes($ext) as $ext_type) {
+                        if (!in_array($ext_type, $filter_types)) {
+                            dump([$type, $ext, $ext_type]);
+                            $add_types[$ext_type] = $ext_type;
+                        }
+                    }
+                }
+                foreach ($this->map->getTypeAliases($type) as $alias) {
+                    foreach ($this->map->getAliasTypes($alias) as $alias_type) {
+                        if (!in_array($alias_type, $filter_types)) {
+                            dump([$type, $alias, $alias_type]);
+                            $add_types[$alias_type] = $alias_type;
+                        }
+                    }
+                }
+            }
+            if ($add_types === []) {
+                break;
+            }
+            $filter_types = array_merge($filter_types, $add_types);
+        }
+
+        $types_for_removal = array_diff($this->map->listTypes(), $filter_types);
+        foreach ($types_for_removal as $type) {
+            $this->map->removeType($type);
+        }
+
+        $this->map->sort();
+
+        foreach ($this->map->listTypes() as $type) {
+            if ($this->map->getTypeExtensions($type) !== $source_map_array['t'][$type]['e']) {
+                dump([$type, $this->map->getTypeExtensions($type), $source_map_array['t'][$type]['e']]);
+            }
+        }
+        foreach ($this->map->listExtensions() as $extension) {
+            if ($this->map->getExtensionTypes($extension) !== $source_map_array['e'][$extension]['t']) {
+                dump([$extension, $this->map->getExtensionTypes($extension), $source_map_array['e'][$extension]['t']]);
+            }
+        }
+        foreach ($this->map->listAliases() as $alias) {
+            if ($this->map->getAliasTypes($alias) !== $source_map_array['a'][$alias]['t']) {
+                dump([$alias, $this->map->getAliasTypes($alias), $source_map_array['a'][$alias]['t']]);
+            }
+        }
+
+
+//dump($this->map);
         return $errors;
     }
 
