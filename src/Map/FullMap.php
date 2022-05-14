@@ -4419,7 +4419,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Calc spreadsheet',
+        0 => 'LibreOffice Calc spreadsheet',
       ),
       'e' =>
       array (
@@ -4430,7 +4430,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Calc template',
+        0 => 'LibreOffice Calc template',
       ),
       'e' =>
       array (
@@ -4441,7 +4441,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Draw drawing',
+        0 => 'LibreOffice Draw drawing',
       ),
       'e' =>
       array (
@@ -4452,7 +4452,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Draw template',
+        0 => 'LibreOffice Draw template',
       ),
       'e' =>
       array (
@@ -4463,7 +4463,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Impress presentation',
+        0 => 'LibreOffice Impress presentation',
       ),
       'e' =>
       array (
@@ -4474,7 +4474,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Impress template',
+        0 => 'LibreOffice Impress template',
       ),
       'e' =>
       array (
@@ -4485,7 +4485,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Math formula',
+        0 => 'LibreOffice Math formula',
       ),
       'e' =>
       array (
@@ -4496,7 +4496,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Writer document',
+        0 => 'LibreOffice Writer document',
       ),
       'e' =>
       array (
@@ -4507,7 +4507,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Writer global document',
+        0 => 'LibreOffice Writer global document',
       ),
       'e' =>
       array (
@@ -4518,7 +4518,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'OpenOffice Writer template',
+        0 => 'LibreOffice Writer template',
       ),
       'e' =>
       array (
@@ -4838,17 +4838,6 @@ class FullMap extends AbstractMap
         0 => 'cmp',
       ),
     ),
-    'application/vnd.youtube.yt' =>
-    array (
-      'desc' =>
-      array (
-        0 => 'YouTube media archive',
-      ),
-      'e' =>
-      array (
-        0 => 'yt',
-      ),
-    ),
     'application/vnd.zul' =>
     array (
       'e' =>
@@ -5075,6 +5064,18 @@ class FullMap extends AbstractMap
         0 => 'arj',
       ),
     ),
+    'application/x-asar' =>
+    array (
+      'desc' =>
+      array (
+        0 => 'Electron Archive (ASAR)',
+        1 => 'ASAR: Atom Shell Archive Format',
+      ),
+      'e' =>
+      array (
+        0 => 'asar',
+      ),
+    ),
     'application/x-asp' =>
     array (
       'desc' =>
@@ -5159,7 +5160,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'BCPIO document',
+        0 => 'BCPIO archive',
         1 => 'BCPIO: Binary CPIO',
       ),
       'e' =>
@@ -7949,7 +7950,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'Manpage manual document',
+        0 => 'Manual page',
       ),
       'e' =>
       array (
@@ -8856,8 +8857,8 @@ class FullMap extends AbstractMap
       ),
       'desc' =>
       array (
-        0 => 'DTSHD audio',
-        1 => 'DTSHD: Digital Theater Systems High Definition',
+        0 => 'DTS-HD audio',
+        1 => 'DTS-HD: Digital Theater Systems High Definition',
       ),
       'e' =>
       array (
@@ -9342,6 +9343,18 @@ class FullMap extends AbstractMap
       'e' =>
       array (
         0 => 'stm',
+      ),
+    ),
+    'audio/x-tak' =>
+    array (
+      'desc' =>
+      array (
+        0 => 'TAK audio',
+        1 => 'TAK: Tom\'s lossless Audio Kompressor',
+      ),
+      'e' =>
+      array (
+        0 => 'tak',
       ),
     ),
     'audio/x-tta' =>
@@ -10887,6 +10900,22 @@ class FullMap extends AbstractMap
         1 => 'mime',
       ),
     ),
+    'model/3mf' =>
+    array (
+      'a' =>
+      array (
+        0 => 'application/vnd.ms-3mfdocument',
+      ),
+      'desc' =>
+      array (
+        0 => '3MF document',
+        1 => '3MF: 3D Manufacturing Format',
+      ),
+      'e' =>
+      array (
+        0 => '3mf',
+      ),
+    ),
     'model/gltf+json' =>
     array (
       'desc' =>
@@ -10931,6 +10960,28 @@ class FullMap extends AbstractMap
         0 => 'msh',
         1 => 'mesh',
         2 => 'silo',
+      ),
+    ),
+    'model/mtl' =>
+    array (
+      'desc' =>
+      array (
+        0 => 'OBJ 3D model material library',
+      ),
+      'e' =>
+      array (
+        0 => 'mtl',
+      ),
+    ),
+    'model/obj' =>
+    array (
+      'desc' =>
+      array (
+        0 => 'OBJ 3D model',
+      ),
+      'e' =>
+      array (
+        0 => 'obj',
       ),
     ),
     'model/stl' =>
@@ -11671,6 +11722,31 @@ class FullMap extends AbstractMap
         0 => 'dcl',
       ),
     ),
+    'text/x-devicetree-binary' =>
+    array (
+      'desc' =>
+      array (
+        0 => 'Flattened Devicetree',
+        1 => 'DTB: Device Tree Binary',
+      ),
+      'e' =>
+      array (
+        0 => 'dtb',
+      ),
+    ),
+    'text/x-devicetree-source' =>
+    array (
+      'desc' =>
+      array (
+        0 => 'Devicetree source code',
+        1 => 'DTS: Device Tree Source',
+      ),
+      'e' =>
+      array (
+        0 => 'dts',
+        1 => 'dtsi',
+      ),
+    ),
     'text/x-dsl' =>
     array (
       'desc' =>
@@ -11850,7 +11926,7 @@ class FullMap extends AbstractMap
     array (
       'desc' =>
       array (
-        0 => 'Gradle scripts',
+        0 => 'Gradle script',
       ),
       'e' =>
       array (
@@ -13042,6 +13118,21 @@ class FullMap extends AbstractMap
         1 => 'vivo',
       ),
     ),
+    'video/vnd.youtube.yt' =>
+    array (
+      'a' =>
+      array (
+        0 => 'application/vnd.youtube.yt',
+      ),
+      'desc' =>
+      array (
+        0 => 'YouTube media archive',
+      ),
+      'e' =>
+      array (
+        0 => 'yt',
+      ),
+    ),
     'video/webm' =>
     array (
       'desc' =>
@@ -13364,6 +13455,13 @@ class FullMap extends AbstractMap
       't' =>
       array (
         0 => 'video/3gpp2',
+      ),
+    ),
+    '3mf' =>
+    array (
+      't' =>
+      array (
+        0 => 'model/3mf',
       ),
     ),
     '7z' =>
@@ -13831,6 +13929,13 @@ class FullMap extends AbstractMap
       't' =>
       array (
         0 => 'application/x-applix-spreadsheet',
+      ),
+    ),
+    'asar' =>
+    array (
+      't' =>
+      array (
+        0 => 'application/x-asar',
       ),
     ),
     'asc' =>
@@ -15364,6 +15469,7 @@ class FullMap extends AbstractMap
       't' =>
       array (
         0 => 'application/x-dtbook+xml',
+        1 => 'text/x-devicetree-binary',
       ),
     ),
     'dtd' =>
@@ -15378,6 +15484,7 @@ class FullMap extends AbstractMap
       't' =>
       array (
         0 => 'audio/vnd.dts',
+        1 => 'text/x-devicetree-source',
       ),
     ),
     'dtshd' =>
@@ -15385,6 +15492,13 @@ class FullMap extends AbstractMap
       't' =>
       array (
         0 => 'audio/vnd.dts.hd',
+      ),
+    ),
+    'dtsi' =>
+    array (
+      't' =>
+      array (
+        0 => 'text/x-devicetree-source',
       ),
     ),
     'dtx' =>
@@ -19086,6 +19200,13 @@ class FullMap extends AbstractMap
         0 => 'application/x-msx-rom',
       ),
     ),
+    'mtl' =>
+    array (
+      't' =>
+      array (
+        0 => 'model/mtl',
+      ),
+    ),
     'mtm' =>
     array (
       't' =>
@@ -19429,6 +19550,7 @@ class FullMap extends AbstractMap
       't' =>
       array (
         0 => 'application/x-tgif',
+        1 => 'model/obj',
       ),
     ),
     'ocl' =>
@@ -22415,6 +22537,13 @@ class FullMap extends AbstractMap
         0 => 'application/vnd.mynfc',
       ),
     ),
+    'tak' =>
+    array (
+      't' =>
+      array (
+        0 => 'audio/x-tak',
+      ),
+    ),
     'tao' =>
     array (
       't' =>
@@ -24598,7 +24727,7 @@ class FullMap extends AbstractMap
     array (
       't' =>
       array (
-        0 => 'application/vnd.youtube.yt',
+        0 => 'video/vnd.youtube.yt',
       ),
     ),
     'z' =>
@@ -25038,6 +25167,13 @@ class FullMap extends AbstractMap
         0 => 'application/x-hwt',
       ),
     ),
+    'application/vnd.ms-3mfdocument' =>
+    array (
+      't' =>
+      array (
+        0 => 'model/3mf',
+      ),
+    ),
     'application/vnd.ms-word' =>
     array (
       't' =>
@@ -25092,6 +25228,13 @@ class FullMap extends AbstractMap
       't' =>
       array (
         0 => 'application/vnd.flatpak',
+      ),
+    ),
+    'application/vnd.youtube.yt' =>
+    array (
+      't' =>
+      array (
+        0 => 'video/vnd.youtube.yt',
       ),
     ),
     'application/wk1' =>
